@@ -174,12 +174,12 @@ Default timeout is 5 seconds.
 Commands Usage:
 (file)
 python status.py file <file to read> <file to output>
-eg. python status.py file URL.txt Results.txt
+eg. python status.py file Hosts.txt Results.txt
 
 if you want only reachable urls in output:
 python status.py file <file to read> <file to output> -r/--reachableurl
-eg. python status.py file URL.txt Results.txt --reachableurl
-eg. python status.py file URL.txt Results.txt -r
+eg. python status.py file Hosts.txt Results.txt --reachableurl
+eg. python status.py file Hosts.txt Results.txt -r
 
 (url)
 python status.py url <url of website>
@@ -201,8 +201,4 @@ if __name__ == "__main__":
     typer.echo(title)
     description = typer.style('                         version 1.0\n                       ~Irfan Shah Jahan~', fg=typer.colors.BRIGHT_MAGENTA)
     typer.echo(description)
-    help = typer.style('\ncommand for manual:', fg=typer.colors.BRIGHT_WHITE)
-    typer.echo(help)
-    command = typer.style('python status.py manual\n', fg=typer.colors.BRIGHT_CYAN)
-    typer.echo(command)
     app()
